@@ -1,9 +1,17 @@
-Electricity is one of the most essential resources in our daily life. From lighting our homes to running industries, everything depends on a reliable supply of power. However, the demand for electricity is never constant. It keeps changing throughout the day and across seasons. For example, in the morning when people prepare for work, energy usage increases. In the afternoon, industrial consumption may rise, while at night, lights, fans, air conditioners, or heaters add to the load.
+Energy consumption forecasting is a critical task for efficient power management and sustainable energy systems. The demand for electricity varies dynamically due to human activities, weather conditions, time of day, and seasonal factors. Accurate forecasting allows utility companies to balance supply and demand, minimize operational costs, and integrate renewable energy sources more effectively.
 
-Power companies face a big challenge: if they produce too much electricity, it leads to wastage and higher costs. If they produce too little, it causes shortages and blackouts. This is where Artificial Intelligence (AI) plays a vital role.
+This project implements an AI-driven forecasting model using Python and TensorFlow. The approach treats energy consumption as a time-series prediction problem, where past usage data is used to predict future demand. We employ a Long Short-Term Memory (LSTM) neural network, a type of recurrent neural network (RNN) that is particularly well-suited for capturing sequential dependencies and temporal patterns in data.
 
-In this project, we use AI and Machine Learning techniques to study past energy consumption data along with factors like weather and time. By analyzing these patterns, the AI learns how electricity demand behaves under different conditions. Once trained, the model can predict future energy usage for the coming hours or days.
+The workflow is as follows:
 
-Such forecasts are very useful for energy providers. They can plan production more efficiently, reduce costs, and avoid unnecessary wastage. Accurate forecasting also supports renewable energy sources like solar and wind, which depend heavily on weather conditions.
+Data Preparation – Load and preprocess historical energy consumption records, including optional exogenous features such as temperature and time-based variables.
 
-In simple terms, this project helps in predicting tomorrow’s electricity needs today, ensuring better management of resources, lower costs, and more reliable power supply.
+Model Training – Train the LSTM model on sliding windows of past energy usage to predict the next time step.
+
+Evaluation – Assess performance using standard metrics like Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE).
+
+Prediction – Generate short-term forecasts (e.g., next hour/day) based on recent historical values.
+
+The repository includes scripts for training (train.py), prediction (predict.py), a sample dataset, and a Jupyter notebook for exploratory analysis.
+
+This project demonstrates how deep learning can be applied to real-world energy management problems, supporting smarter grids, cost savings, and improved sustainability.
